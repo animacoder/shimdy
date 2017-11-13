@@ -1,0 +1,16 @@
+name: shimdy
+version: '0.1'
+summary: tek komutla gündemi getirir. 
+description: finans, gündem, spor, hava durumu ve daha birçok bilgiyi tek komutla getirir.
+grade: stable
+confinement: strict
+
+apps:
+  shimdy:
+    command: shimdy
+
+parts:
+  shimdy:
+    source: .
+    plugin: dump
+    install: sh shimdy.sh
