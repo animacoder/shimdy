@@ -77,11 +77,6 @@ spor=$(curl --silent $RSS_URL | grep -E '(title>)' | tail -n $((20)) |  sed -n '
 printf "$spor\n"
 printf "\n"
 
-
-exit 1
-
-
-
 printf "\n\n"
 
 printf "${RED}======== Hava Durumu ========${NOC}\n\n"
@@ -91,6 +86,13 @@ ip=$(curl -s ipinfo.io/$ip)
 sehir=$(curl -s ipinfo.io/$ip/city)
 curl -s tr.wttr.in/$sehir?0
 printf "\n\n"
+
+
+exit 1
+
+
+
+
 
 
 
